@@ -16,13 +16,14 @@ var debug = require("debug")("ftp-express-server:server");
 var http = require("http");
 var FTP = require("ftp-srv");
 var os = require("os");
-var { ftpPort, ftpUsername, ftpPassword } = require("../configs");
+var { ftpPort, ftpUsername, ftpPassword, hostIP } = require("../configs");
 
 var ftpPort_ = normalizePort(ftpPort || 2121);
+var hostIp_ = hostIP ? hostIP : "127.0.0.1";
 
 var ftpServer = new FTP({
-  url: `ftp://127.0.0.1:${ftpPort_}`,
-  pasv_url: "192.168.1.1",
+  url: `ftp://0.0.0.0:${ftpPort_}`,
+  pasv_url: hostIp_,
   pasv_min: 8881,
   greeting: [
     "Welcome",

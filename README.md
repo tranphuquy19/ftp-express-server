@@ -36,3 +36,8 @@ The HTTP server is started at the default port `3000`, and the FTP server is `21
 ### 6.2 Change FTP username and FTP password
 
 By default, the user logs in to the ftp server with any username and password as "quydeptroai". Please edit the file ".env" and re-run server to apply the new username and password!
+
+## Q&A
+
+- Q: The FTP server successfully logged in at localhost but the other host(another ip) failed?
+- A: Please change the host's ip value at .env file
