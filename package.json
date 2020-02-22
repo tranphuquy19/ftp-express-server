@@ -2,6 +2,7 @@
   "name": "ftp-express-server",
   "version": "1.0.0",
   "private": false,
+  "author": "tranphuquy19",
   "license": "MIT",
   "scripts": {
     "start": "node ./bin/www"
