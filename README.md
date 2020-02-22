@@ -29,6 +29,10 @@ Server started at port: `3000` - [http://localhost:3000](http://localhost:3000)
 
 The HTTP server is started at the default port `3000`, and the FTP server is `2121`. Remove the "#" character before `PORT=xxxx` in the ".env" file to customize the server port
 
+Note: on Linux operating system environment, to start the server with port value from 0 - 1023 supperuser permission is required. To fix running `sudo node start` or` sudo yarn start`, enter the password if required! 
+
+Attention: Running applications at these ports may conflict with existing OS services
+
 ### 6.2 Change FTP username and FTP password
 
 By default, the user logs in to the ftp server with any username and password as "quydeptroai". Please edit the file ".env" and re-run server to apply the new username and password!
