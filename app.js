@@ -3,20 +3,10 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var FTP = require("ftp-srv");
-var ftpServer = new FTP();
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
-ftpServer.on("login", ({ connection, username, password }, resolve, reject) => {
-  console.log({ username, password });
-  resolve({root: require('os').homedir()});
-});
-
-ftpServer.listen().then(() => {
-  console.log("FTP server is running");
-});
 var app = express();
 
 // view engine setup
